@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.accent-purple-600 {
+    accent-color: #9333ea;
+}
