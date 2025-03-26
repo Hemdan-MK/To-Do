@@ -1,5 +1,5 @@
 import { FormEvent, useRef } from "react";
-import { FormProps } from "../types/interface"
+import { FormProps } from "../types/Interface"
 import { toast } from "react-toastify";
 
 
@@ -40,8 +40,8 @@ export default function Form({
                 onChange={(e) => setNewTodo(e.target.value)}
                 ref={inputRef}
                 placeholder="Enter New Task ..."
-                className="border p-2 rounded"
-            />
+                className="border border-black p-2 rounded-md transition-all duration-300 focus:ring-4 focus:ring-purple-500 focus:border-transparent"
+                />
 
             <button type="submit" className="bg-purple-500 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition"
             >

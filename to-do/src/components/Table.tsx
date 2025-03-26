@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TableProps } from "../types/interface"
+import { TableProps } from "../types/Interface"
 import { toast } from "react-toastify";
 import { Calendar, Edit, Trash2, X } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
@@ -35,7 +35,7 @@ export default function Table({ todos, setTodos, filter }: TableProps) {
         if (todoToDelete) {
             setTodos((until) => {
                 return until.filter(todo => {
-                    todo.id !== todoToDelete;
+                    return todo.id !== todoToDelete;
                 });
             });
 
@@ -66,7 +66,7 @@ export default function Table({ todos, setTodos, filter }: TableProps) {
 
     const saveEdit = () => {
         const check = todos.some(todo => {
-            return todo.text === editTodoText && todo.id === editTodoId
+            return todo.text === editTodoText.trim()
         })
         if (check) {
             toast.error("This todo already exists", {
@@ -159,7 +159,6 @@ export default function Table({ todos, setTodos, filter }: TableProps) {
                                 </div>
                             </div>
                         )
-
                     )),
                     ...reversedTodos.map((todo) => (
                         todo.completed && (

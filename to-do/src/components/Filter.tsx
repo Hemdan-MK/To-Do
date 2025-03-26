@@ -1,4 +1,4 @@
-import { FilterProps } from "../types/interface"
+import { FilterProps } from "../types/Interface"
 import { Filter as FilterIcon } from "lucide-react";
 
 export default function Filter({ filter, setFilter, filteredCount }: FilterProps) {

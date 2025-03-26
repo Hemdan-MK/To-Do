@@ -3,7 +3,7 @@ import Table from "./components/Table";
 import Filter from "./components/Filter";
 import { useState } from "react";
 
-import { TodoIF } from "./types/interface"
+import { TodoIF } from "./types/Interface"
 import { ToastContainer } from "react-toastify";
 
 
@@ -20,8 +20,8 @@ function App() {
   })
 
   return (
-    <div className="min-h-screen flex items-center justify-center  bg-gradient-to-br from-indigo-900 via-purple-500 to-blue-500 p-8 pt-30">
-      <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-xl p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-900 via-purple-500 to-blue-500">
+      <div className="mx-auto min-w-[600px] bg-white rounded-lg shadow-xl p-6">
         <div className="flex justify-center items-center mb-6">
           <h1 className="text-2xl font-bold text-gray-800">My Todo Lists</h1>
         </div>
